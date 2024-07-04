@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RecipeDTOWithType {
     private int recipeId;
-    private String type; //breakfast , lunch , dinner
+    private int type; //breakfast , lunch , dinner
+    private int day; //monday, tuesday, ... sunday
 }

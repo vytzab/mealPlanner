@@ -22,7 +22,8 @@ public class MealPlan {
     @CollectionTable(name = "mealplan_recipe_mapping", joinColumns = @JoinColumn(name = "mealplan_id"))
     @AttributeOverrides({
             @AttributeOverride(name = "recipeId", column = @Column(name = "recipe_id")),
-            @AttributeOverride(name = "type", column = @Column(name = "type"))
+            @AttributeOverride(name = "type", column = @Column(name = "type")),
+            @AttributeOverride(name = "day", column = @Column(name = "day"))  // New day attribute
     })
     private List<RecipeDTOWithType> meals;
     private int shoppingListId;

@@ -33,7 +33,7 @@ public class MealPlanServiceImpl implements MealPlanService{
     @Override
     public ResponseEntity<MealPlanDTO> getMealPlan(Integer id) {
         Optional<MealPlan> optionalMealPlan = mealPlanRepository.findById(id);
-        return optionalMealPlan.map(recipe -> new ResponseEntity<>(MealPlanMapper.INSTANCE.mapMealPlanToMealPlanDTO(recipe), HttpStatus.OK))
+        return optionalMealPlan.map(mealPlan -> new ResponseEntity<>(MealPlanMapper.INSTANCE.mapMealPlanToMealPlanDTO(mealPlan), HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
     }
 

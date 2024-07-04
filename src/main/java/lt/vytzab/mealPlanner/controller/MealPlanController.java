@@ -24,8 +24,8 @@ public class MealPlanController {
 
     @GetMapping("/getAllMealPlans")
     public ResponseEntity<List<MealPlanDTO>> getAllMealPlans(){
-        List<MealPlanDTO> allIngredients = mealPlanService.getAllMealPlans();
-        return new ResponseEntity<>(allIngredients, HttpStatus.OK);
+        List<MealPlanDTO> allMealPlans = mealPlanService.getAllMealPlans();
+        return new ResponseEntity<>(allMealPlans, HttpStatus.OK);
     }
 
     @GetMapping("/getMealPlan/{id}")
