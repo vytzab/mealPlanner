@@ -8,6 +8,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface MealPlanMapper {
     MealPlanMapper INSTANCE = Mappers.getMapper(MealPlanMapper.class);
-    MealPlan mapMealPlanDTOToMealPlan(MealPlanDTO recipeDTO);
-    MealPlanDTO mapMealPlanToMealPlanDTO(MealPlan recipe);
+    MealPlan mapMealPlanDTOToMealPlan(MealPlanDTO mealPlanDTO);
+    MealPlanDTO mapMealPlanToMealPlanDTO(MealPlan mealPlan);
 }

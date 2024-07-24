@@ -43,6 +43,7 @@ public class MealPlanServiceImpl implements MealPlanService{
         if (optionalMealPlan.isEmpty()) {
             throw new NotFoundException("Meal Plan not found with id: " + id);
         }
+
         MealPlan mealPlan = mealPlanRepository.save(MealPlanMapper.INSTANCE.mapMealPlanDTOToMealPlan(mealPlanDTO));
         return MealPlanMapper.INSTANCE.mapMealPlanToMealPlanDTO(mealPlan);
     }

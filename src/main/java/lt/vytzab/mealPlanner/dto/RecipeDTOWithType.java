@@ -11,4 +11,5 @@ public class RecipeDTOWithType {
     private int recipeId;
     private int type; //breakfast , lunch , dinner
     private int day; //monday, tuesday, ... sunday
+    private Integer person;
 }
